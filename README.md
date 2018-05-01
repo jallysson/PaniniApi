@@ -1,2 +1,2 @@
 # PaniniApi
-:headphones: Api para homologar com aplicações de leitor de mangá
+:headphones: Api para homologar com aplicações de leitor de mangás
