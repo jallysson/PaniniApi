@@ -3,8 +3,14 @@ sys.path.append("../Model")
 
 from mongodb import *
 
-def get_sinopse():
-	album = database_mongodb['sinopse_collection']
-	sinopse = album.find_one()
-	del sinopse['_id']
-	return sinopse
+album = database_mongodb['sinopse_collection']
+
+def get_sinopse_domain():
+	sinopses = []
+	for sinopse in album.find():
+		del sinopse['_id']
+		sinopses.append(sinopse)
+	return sinopses
+
+def post_sinopse_domain(request):
+	album.insert_one(request).inserted_id

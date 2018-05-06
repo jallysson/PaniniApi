@@ -1,5 +1,9 @@
-from pymongo import MongoClient
+import sys
+sys.path.append("../")
 
-client = MongoClient('localhost', 27017)
+from pymongo import MongoClient
+from settings import *
+
+client = MongoClient(mongodb_connection)
 
 database_mongodb = client['mangas-database']
