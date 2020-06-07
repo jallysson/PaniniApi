@@ -1,1 +1,3 @@
-mongodb_connection = 'mongodb://localhost:27017/'
+import os
+
+HOST = os.getenv('HOST')
