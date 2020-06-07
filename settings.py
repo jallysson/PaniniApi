@@ -5,3 +5,4 @@ PORT = os.getenv('PORT')
 MONGODB = os.getenv('MONGODB')
 PANINI_DB = 'panini'
 SYNOPSIS_COLLECTION = 'synopsis'
+REPOSITORY = 'https://github.com/jallysson/PaniniApi'

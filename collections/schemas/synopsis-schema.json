@@ -1,0 +1,60 @@
+{
+    "title": "synopsis-schema",
+    "type": "object",
+    "required": [
+        "title",
+        "year",
+        "genres",
+        "authors",
+        "publisher",
+        "synopsis",
+        "creation_date"
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "title": "Title"
+        },
+        "year": {
+            "type": "integer",
+            "title": "Year of Creation"
+        },
+        "genres": {
+            "title": "Genres",
+            "type": "object",
+                "required": [
+                    "genre"
+                ],
+                "properties": {
+                    "genre": {
+                        "type": "string"
+                    }
+                } 
+        },
+        "authors": {
+            "title": "Authors",
+            "type": "object",
+                "required": [
+                    "author"
+                ],
+                "properties": {
+                    "author": {
+                        "type": "string"
+                    }
+                } 
+        },
+        "publisher": {
+            "type": "string",
+            "title": "Publishing Company"
+        },
+        "synopsis": {
+            "type": "string",
+            "title": "Synopsis"
+        },
+        "date": {
+            "type": "string",
+            "format": "date",
+            "title": "Registration Date"
+        }
+    }
+}
