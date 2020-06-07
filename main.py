@@ -1,9 +1,19 @@
 from settings import HOST, PORT
-from endpoints.sinopses import *
+import sys
+sys.path.append('collections')
+from synopsis import synopsis
+from flask import Flask, jsonify, request
 
-@app.route("/")
+app = Flask(__name__)
+methods = ['GET', 'POST']
+
+@app.route('/')
 def up():
-	return "PaniniApi Up"
+	return 'PaniniApi Up'
 
-if __name__ == '__main__':
-	app.run(host = HOST, port = PORT)
+@app.route('/synopsis', methods=methods)
+def _synopsis():
+    return synopsis(request)
+
+
+app.run(host=HOST, port=PORT, debug=True)
