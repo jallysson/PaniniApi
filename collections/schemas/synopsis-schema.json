@@ -20,28 +20,12 @@
             "title": "Year of Creation"
         },
         "genres": {
-            "title": "Genres",
-            "type": "object",
-                "required": [
-                    "genre"
-                ],
-                "properties": {
-                    "genre": {
-                        "type": "string"
-                    }
-                } 
+            "type": "array",
+            "title": "Genres"
         },
         "authors": {
-            "title": "Authors",
-            "type": "object",
-                "required": [
-                    "author"
-                ],
-                "properties": {
-                    "author": {
-                        "type": "string"
-                    }
-                } 
+            "type": "array",
+            "title": "Authors"
         },
         "publisher": {
             "type": "string",
