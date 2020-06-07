@@ -1,2 +1,2 @@
 # PaniniApi
-:headphones: Api for manga player applications
+:headphones: - API for reading
